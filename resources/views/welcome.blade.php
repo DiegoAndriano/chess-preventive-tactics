@@ -12,12 +12,9 @@
 </head>
 <body id="app">
 <main>
-    <p class="text-slate-500 font-bold text-5xl">Hola</p>
-    <entrance>
-        <div class="w-10 h-10 bg-gray-500">
-            <p class="text-red-500 text-3xl">Que tal</p>
-        </div>
-    </entrance>
+    <div>
+        <board></board>
+    </div>
 </main>
 @vite('resources/js/app.js')
 </body>
