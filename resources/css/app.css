@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+    .entrance-from {
+        @apply transform scale-90 translate-y-5 origin-center
+    }
+
+    .entrance-to {
+        @apply transition transform ease-in-out duration-500 opacity-100 scale-100 translate-y-0 origin-center
+    }
+}
