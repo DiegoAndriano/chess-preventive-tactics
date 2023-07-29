@@ -59,7 +59,7 @@ function prev() {
 
 </script>
 <template>
-    <div class="bg-gray-100">
+    <div class="bg-stone-50">
         <TheChessboard :board-config="boardConfig" @board-created="(api) => (boardAPI = api)"/>
         <button @click="prev" class="rounded-xl px-4 py-2 border mx-2 bg-white" v-text="'<'"></button>
         <button @click="next" class="rounded-xl px-4 py-2 border mx-2 bg-white" v-text="'>'"></button>
