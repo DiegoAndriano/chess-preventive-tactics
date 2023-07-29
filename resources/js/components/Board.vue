@@ -34,8 +34,8 @@ function nextMove(event) {
 <template>
     <div class="bg-gray-100">
         <TheChessboard coordinates="true" @board-created="(api) => (boardAPI = api)"/>
-        <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ games[1].option_one }}</button>
+        <!--<button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ games[1].option_one }}</button>
         <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ games[1].option_two }}</button>
-        <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ games[1].option_three }}</button>
+        <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ games[1].option_three }}</button>-->
     </div>
 </template>
