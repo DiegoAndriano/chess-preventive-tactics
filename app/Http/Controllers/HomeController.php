@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\LichessService;
+use App\Models\Tactic;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(LichessService $lichessService)
+    public function index()
     {
-        $game = $lichessService->getGame();
+        $tactics = Tactic::get();
 
         return view('welcome', [
-            'bestMoves' => $game['bestMoves']['data'],
-            'tactic' => $game['tactic']
+            'tactic' => $tactics
         ]);
     }
 }
