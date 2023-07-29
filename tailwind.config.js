@@ -8,6 +8,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            fontFamily: {
+				Khula: ["Khula", "sans-serif"],
+			 },
         },
     },
     plugins: [],
