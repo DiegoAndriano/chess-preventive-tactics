@@ -2,6 +2,8 @@
 import {onMounted, ref, computed} from 'vue'
 import {TheChessboard} from 'vue3-chessboard';
 import 'vue3-chessboard/style.css';
+import IconChevronLeft from './Icons/IconChevronLeft.vue'
+import IconChevronRight from './Icons/IconChevronRight.vue'
 
 const props = defineProps({tactic: Array})
 
@@ -42,7 +44,7 @@ const boardConfig = {
 }
 
 function next() {
-    if (index.value < games.length -1) {
+    if (index.value < games.length - 1) {
         index.value++
         boardAPI?.loadPgn(pgn.value)
     }
@@ -60,11 +62,31 @@ function prev() {
 </script>
 <template>
     <div class="bg-stone-50">
-        <TheChessboard :board-config="boardConfig" @board-created="(api) => (boardAPI = api)"/>
-       <!-- <button @click="prev" class="rounded-xl px-4 py-2 border mx-2 bg-white" v-text="'<'"></button>
-        <button @click="next" class="rounded-xl px-4 py-2 border mx-2 bg-white" v-text="'>'"></button>
-        <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ option_one }}</button>
-        <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ option_two }}</button>
-        <button v-if="option_three" class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ option_three }}</button>-->
+        <TheChessboard class="pb-4" :board-config="boardConfig" @board-created="(api) => (boardAPI = api)"/>
+
+        <div class="flex gap-x-16 px-4 py-6">
+            <button
+                class="w-auto h-auto border border-[1.5px] border-stone-300 px-4 py-2 rounded-lg font-semibold text-stone-700">
+                {{ option_one }}
+            </button>
+            <button
+                class="w-auto h-auto border border-[1.5px] border-stone-300 px-4 py-2 rounded-lg font-semibold text-stone-700">
+                {{ option_two }}
+            </button>
+            <button
+                v-if="option_three"
+                class="w-auto h-auto border border-[1.5px] border-stone-300 px-4 py-2 rounded-lg font-semibold text-stone-700">
+                {{ option_three }}
+            </button>
+        </div>
+
+        <div class="flex justify-between items-center px-4 py-6">
+            <button @click="prev" class=" w-auto h-auto flex items-center gap-4 px-2 py-2 rounded-lg text-stone-500">
+                <span><IconChevronLeft class="w-6 h-6"> </IconChevronLeft></span>Previous game
+            </button>
+            <button @click="next" class=" w-auto h-auto flex items-center gap-4 px-2 py-2 rounded-lg  text-stone-500">
+                Next game <span><IconChevronRight class="w-6 h-6"> </IconChevronRight></span>
+            </button>
+        </div>
     </div>
 </template>
