@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe33f98a750b8c5a51b30c78bd3fab21",
+    "content-hash": "aef83eb625171741d87f1acd5524a5d2",
     "packages": [
         {
             "name": "brick/math",
@@ -2300,6 +2300,52 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "onspli/chess",
+            "version": "v0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/onspli/chess.git",
+                "reference": "a8749162fbacac5fc2d3080dd47465f13f5b4a6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/onspli/chess/zipball/a8749162fbacac5fc2d3080dd47465f13f5b4a6a",
+                "reference": "a8749162fbacac5fc2d3080dd47465f13f5b4a6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "require-dev": {
+                "onspli/phpdoc-markdown": "dev-master",
+                "php-coveralls/php-coveralls": "^2.4",
+                "phpbench/phpbench": "^1.1",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Onspli\\Chess\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ondřej Šplíchal",
+                    "email": "ondrej.splichal@gmail.com"
+                }
+            ],
+            "description": "PHP library for reading and editing FEN and PGN chess formats.",
+            "support": {
+                "issues": "https://github.com/onspli/chess/issues",
+                "source": "https://github.com/onspli/chess/tree/v0.2.0"
+            },
+            "time": "2022-05-27T11:54:09+00:00"
         },
         {
             "name": "phpoption/phpoption",

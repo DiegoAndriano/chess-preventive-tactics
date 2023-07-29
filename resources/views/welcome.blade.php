@@ -12,8 +12,8 @@
 </head>
 <body id="app">
 <main>
-    <div>
-        <board></board>
+    <div class="bg-gray-100 pb-32 pt-10">
+        <board best-moves="'{{ $bestMoves }}'" :tactic="{{ json_encode($tactic) }}"></board>
     </div>
 </main>
 @vite('resources/js/app.js')
