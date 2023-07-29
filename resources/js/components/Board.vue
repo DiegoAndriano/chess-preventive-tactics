@@ -61,10 +61,10 @@ function prev() {
 <template>
     <div class="bg-stone-50">
         <TheChessboard :board-config="boardConfig" @board-created="(api) => (boardAPI = api)"/>
-        <button @click="prev" class="rounded-xl px-4 py-2 border mx-2 bg-white" v-text="'<'"></button>
+       <!-- <button @click="prev" class="rounded-xl px-4 py-2 border mx-2 bg-white" v-text="'<'"></button>
         <button @click="next" class="rounded-xl px-4 py-2 border mx-2 bg-white" v-text="'>'"></button>
         <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ option_one }}</button>
         <button class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ option_two }}</button>
-        <button v-if="option_three" class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ option_three }}</button>
+        <button v-if="option_three" class="rounded-xl px-4 py-2 border mx-2 bg-white">{{ option_three }}</button>-->
     </div>
 </template>
