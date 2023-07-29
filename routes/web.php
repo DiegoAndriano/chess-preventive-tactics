@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\DislikeTacticController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LikeTacticController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::post('/like/{tactic}', [LikeTacticController::class, 'store']);
+Route::post('/dislike/{tactic}', [DislikeTacticController::class, 'store']);
