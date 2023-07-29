@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Http\Gateway\Lichess;
+use App\Services\LichessService;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->bind(LichessService::class, function () {
+            return new LichessService(new Lichess());
+        });
     }
 
     /**
