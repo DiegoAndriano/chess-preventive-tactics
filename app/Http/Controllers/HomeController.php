@@ -9,10 +9,21 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $tactics = Tactic::get();
+        $easyTactics = Tactic::get()->filter(function(Tactic $tactic){
+            return ($tactic->easy >= $tactic->medium) && ($tactic->easy >= $tactic->hard);
+        })->sortByDesc('easy');
+        $mediumTactics = Tactic::get()->filter(function(Tactic $tactic){
+            return ($tactic->medium > $tactic->easy) && ($tactic->medium > $tactic->hard);
+        });
+        $hardTactics = Tactic::get()->filter(function(Tactic $tactic){
+            return ($tactic->hard > $tactic->medium) && ($tactic->hard > $tactic->easy);
+        });
+
+        $merged = $mediumTactics->merge($hardTactics);
+        $merged = $merged->merge($easyTactics);
 
         return view('welcome', [
-            'tactic' => $tactics
+            'tactic' => $merged
         ]);
     }
 }

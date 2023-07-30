@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\DislikeTacticController;
+use App\Http\Controllers\EasyTacticController;
 use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\HardTacticController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\LikeTacticController;
+use App\Http\Controllers\MediumTacticController;
+use App\Http\Controllers\TacticAnswerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::post('/like/{tactic}', [LikeTacticController::class, 'store']);
-Route::post('/dislike/{tactic}', [DislikeTacticController::class, 'store']);
+Route::get('/easy/{tactic}', [EasyTacticController::class, 'store']);
+Route::get('/medium/{tactic}', [MediumTacticController::class, 'store']);
+Route::get('/hard/{tactic}', [HardTacticController::class, 'store']);
 Route::post('/feedback', [FeedbackController::class, 'store']);
+Route::get('/answer/{tactic}', [TacticAnswerController::class, 'index']);

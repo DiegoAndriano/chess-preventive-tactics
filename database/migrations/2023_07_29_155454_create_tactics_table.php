@@ -20,10 +20,11 @@ return new class extends Migration
             $table->string('option_one');
             $table->string('option_two');
             $table->string('option_three')->nullable();
-            $table->integer('beaten')->nullable();
-            $table->integer('won')->nullable();
-            $table->integer('likes')->nullable();
-            $table->integer('dislikes')->nullable();
+            $table->integer('beaten')->default(0);
+            $table->integer('won')->default(0);
+            $table->integer('easy')->default(1);
+            $table->integer('medium')->default(1);
+            $table->integer('hard')->default(1);
             $table->string('description')->nullable();
             $table->string('author')->nullable();
             $table->foreignId('user_id')->nullable();
