@@ -13,15 +13,15 @@ function toggleIsdark() {
 
     localStorage.setItem('dark', tactic.isDark.toString())
     if (tactic.isDark) {
-        document.querySelector('#main').classList.add('dark')
+        document.querySelector('#app').classList.add('dark')
     } else {
-        document.querySelector('#main').classList.remove('dark')
+        document.querySelector('#app').classList.remove('dark')
     }
 }
 
 onMounted(() => {
     if (tactic.isDark) {
-        document.querySelector('#main').classList.add('dark')
+        document.querySelector('#app').classList.add('dark')
     }
 })
 

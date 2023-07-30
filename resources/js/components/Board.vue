@@ -1,11 +1,14 @@
 <script setup>
-import {onMounted, ref, computed} from 'vue'
-import {TheChessboard} from 'vue3-chessboard';
+import { onMounted, ref, computed } from 'vue'
+import { TheChessboard } from 'vue3-chessboard';
 import 'vue3-chessboard/style.css';
 import IconChevronLeft from './Icons/IconChevronLeft.vue'
 import IconChevronRight from './Icons/IconChevronRight.vue'
+import IconCheck from './Icons/IconCheck.vue'
+import IconCross from './Icons/IconCross.vue'
+import IconAndina from './Icons/IconAndina.vue'
 
-const props = defineProps({tactic: Array})
+const props = defineProps({ tactic: Array })
 
 let boardAPI;
 
@@ -61,32 +64,71 @@ function prev() {
 
 </script>
 <template>
-    <div class="bg-stone-50">
-        <TheChessboard class="pb-4" :board-config="boardConfig" @board-created="(api) => (boardAPI = api)"/>
+    <div class="bg-stone-50 dark:bg-stone-900">
+        <TheChessboard class="pb-4" :board-config="boardConfig" @board-created="(api) => (boardAPI = api)" />
 
-        <div class="flex gap-x-16 px-4 py-6">
+        <div class="flex gap-x-16 px-4 py-6 md:px-10">
             <button
-                class="w-auto h-auto border border-[1.5px] border-stone-300 px-4 py-2 rounded-lg font-semibold text-stone-700">
+                class="h-auto w-24 bg-stone-300 hover:bg-stone-400 hover:shadow-sm focus:shadow-sm focus:bg-[#8C8783] focus:font-bold px-4 py-2 rounded-lg font-semibold text-stone-700 transform duration-100 ease-in-out dark:bg-stone-900 dark:border dark:text-stone-100 dark:border-stone-50 dark:hover:bg-[#2C2927] md:">
                 {{ option_one }}
             </button>
             <button
-                class="w-auto h-auto border border-[1.5px] border-stone-300 px-4 py-2 rounded-lg font-semibold text-stone-700">
+                class="h-auto w-24 bg-stone-300  hover:bg-stone-400 hover:shadow-sm focus:shadow-sm focus:bg-[#8C8783] focus:font-bold px-4 py-2 rounded-lg font-semibold text-stone-700 transform duration-100 ease-in-out dark:bg-stone-900 dark:border dark:text-stone-100 dark:border-stone-50 dark:hover:bg-[#2C2927]">
                 {{ option_two }}
             </button>
-            <button
-                v-if="option_three"
-                class="w-auto h-auto border border-[1.5px] border-stone-300 px-4 py-2 rounded-lg font-semibold text-stone-700">
+            <button v-if="option_three"
+                class="h-auto w-24 bg-stone-300  hover:bg-stone-400 hover:shadow-sm focus:shadow-sm focus:bg-[#8C8783] focus:font-bold px-4 py-2 rounded-lg font-semibold text-stone-700 transform duration-100 ease-in-out  dark:bg-stone-900 dark:border dark:text-stone-100 dark:border-stone-50 dark:hover:bg-[#2C2927]">
                 {{ option_three }}
             </button>
         </div>
 
-        <div class="flex justify-between items-center px-4 py-6">
-            <button @click="prev" class=" w-auto h-auto flex items-center gap-4 px-2 py-2 rounded-lg text-stone-500">
-                <span><IconChevronLeft class="w-6 h-6"> </IconChevronLeft></span>Previous game
+        <div class="flex justify-between items-center px-4 py-6 md:px-10">
+            <button @click="prev"
+                class=" w-auto h-auto flex items-center gap-4 pl-1 pr-4 py-2 rounded-lg text-stone-500 hover:bg-stone-200 hover:shadow-sm  dark:text-stone-100 dark:hover:bg-[#2C2927]">
+                <span>
+                    <IconChevronLeft class="w-6 h-6"> </IconChevronLeft>
+                </span>Previous game
             </button>
-            <button @click="next" class=" w-auto h-auto flex items-center gap-4 px-2 py-2 rounded-lg  text-stone-500">
-                Next game <span><IconChevronRight class="w-6 h-6"> </IconChevronRight></span>
+            <button @click="next"
+                class=" w-auto h-auto flex items-center gap-4 pl-4 pr-1 py-2 rounded-lg hover:bg-stone-200 hover:shadow-sm text-stone-500  dark:text-stone-100 dark:hover:bg-[#2C2927]">
+                Next game <span>
+                    <IconChevronRight class="w-6 h-6"> </IconChevronRight>
+                </span>
             </button>
         </div>
+
+        <div>
+            <div>
+                <div
+                    class="w-auto h-auto m-6 px-6 py-4 gap-4 flex bg-emerald-50 border border-emerald-700 rounded-lg dark:bg-stone-800 dark:text-stone-50 md:m-10">
+                    <IconCheck class="w-6 h-6"></IconCheck>
+                    <p>Congrats!</p>
+                </div>
+                <div class="w-auto h-auto m-6 px-6 py-4 gap-4 flex bg-rose-50 border border-rose-700 rounded-lg md:m-10">
+                    <IconCross class="w-6 h-6"></IconCross>
+                    <p>Keep working!</p>
+                </div>
+                <p class="px-6 pb-4 md:px-10">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum porta felis quis tincidunt.
+                </p>
+            </div>
+
+            <div class="w-auto h-auto flex m-6 items-baseline justify-evenly">
+                <div class="w-auto h-auto px-2 py-2 gap-4 flex flex-col items-center rounded-lg md:m-10">
+                    <IconAndina class="w-8 h-8"></IconAndina>
+                    <p>Easy</p>
+                </div>
+                <div class="w-auto h-auto  px-2 py-2 gap-4 flex flex-col items-center rounded-lg md:m-10">
+                    <IconAndina class="w-12 h-12"></IconAndina>
+                    <p>Medium</p>
+                </div>
+                <div class="w-auto h-auto  px-2 py-2 gap-4 flex flex-col rounded-lg items-center md:m-10">
+                    <IconAndina class="w-16 h-16"></IconAndina>
+                    <p>Hard</p>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </template>

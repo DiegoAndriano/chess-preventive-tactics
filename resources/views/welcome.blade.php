@@ -30,25 +30,26 @@
 </head>
 
 <body id="app">
-<main class="bg-stone-50 font-Khula w-full h-auto">
-    <nav class="px-4 py-4 w-full h-auto flex justify-between">
-        <x-_svg-andina class="w-auto h-10 text-stone-700"></x-_svg-andina>
-        <x-_svg-cpt class="w-auto h-12 text-stone-700 "></x-_svg-cpt>
+<main class="bg-stone-50 font-Khula w-full h-auto dark:bg-stone-900">
+    <nav class="px-4 py-4 w-full h-auto flex justify-between md:px-10 md:pt-6 items-center">
+        <x-_svg-andina class="w-auto h-10 text-stone-700 dark:text-stone-300 md:h-14"></x-_svg-andina>
+        <x-_svg-cpt class="w-auto h-12 text-stone-700 dark:text-stone-300 md:h-16"></x-_svg-cpt>
         <dark-switch></dark-switch>
     </nav>
     <div class="pb-4 pt-6">
-        <p class="px-4 pb-6 text-stone-700 text-lg font-semibold">Select the move that enables the tactic:</p>
+        <p class="px-4 pb-6 text-stone-700 text-lg font-semibold  dark:text-stone-100 md:px-10 md:text-xl md:pb-10">Select the move that enables the tactic:</p>
         <board :tactic="{{ json_encode($tactic) }}"></board>
     </div>
 
 
     <feedback-component></feedback-component>
-    <footer class="w-full h-auto mt-8 pt-6 pb-20 bg-stone-600 text-stone-50 text-sm leading-loose">
-        <div class=" flex justify-between px-6 py-6 items-center">
+    <footer class="w-full h-auto mt-8 pt-6 pb-20 bg-stone-600 text-stone-50 text-sm leading-loose dark:bg-stone-950">
+        <div class=" flex justify-between px-6 py-6 items-center md:px-10">
             <p class="font-semibold"> About the project </p>
-            <x-_svg-git class="w-6 h-6"></x-_svg-git>
+            <a href="https://github.com/DiegoAndriano/chess-preventive-tactics" target="__blank"> <x-_svg-git class="w-6 h-6 md:w-8 md:h-8 md:mr-2"></x-_svg-git> </a>
+            
         </div>
-        <div class="w-full h-auto px-6">
+        <div class="w-full h-auto px-6 md:px-10">
             <p> Many chess players fall for tactics that could be avoided. Isn't there a tool that helps me prevent the
                 movement that enables the tactic? <br>
                 Now there is! Chess preventing tactics (the older and mature brother of Chess common mistakes) is an
@@ -59,7 +60,7 @@
                 are more than welcome.
             </p>
         </div>
-        <div class="w-full h-auto px-6 py-6 flex gap-6">
+        <div class="w-full h-auto px-6 py-6 flex gap-6 md:px-10">
             <p class="font-semibold"> The tecnologies involved: </p>
             <div class="flex gap-4">
                 <x-_svg-laravel class="w-6 h-6"></x-_svg-laravel>
@@ -67,25 +68,25 @@
                 <x-_svg-vue class="w-6 h-6"></x-_svg-vue>
             </div>
         </div>
-        <div class="px-6 py-4">
+        <div class="px-6 py-4 md:px-10">
             <p class="font font-semibold py-2">Special thanks to these open source libraries:</p>
-            <p>https://github.com/onspli/chess</p>
-            <p>https://qwerty084.github.io/vue3-chessboard/events.html</p>
+            <a href="https://github.com/onspli/chess" target="__blank"> <p>https://github.com/onspli/chess</p> </a>
+            <a href="https://qwerty084.github.io/vue3-chessboard/events.html" target="__blank"> <p>https://qwerty084.github.io/vue3-chessboard/events.html</p> </a>
         </div>
-        <p class="font font-semibold px-6 py-4">The who...</p>
-        <div class="w-auto h-auto px-6 flex justify-between">
+        <p class="font font-semibold px-6 py-4 md:px-10">The who...</p>
+        <div class="w-auto h-auto px-6 flex justify-between md:px-10">
             <div>
                 <p> Full-stack dev</p>
                 <div class="flex gap-2">
                     <p> Diego Andriano </p>
-                    <x-_svg-linkedin class="w-6 h-6"></x-_svg-linkedin>
+                    <a href="https://www.linkedin.com/in/diego-andriano-a59abb139/" target="__blank"> <x-_svg-linkedin class="w-6 h-6"></x-_svg-linkedin></a>
                 </div>
             </div>
             <div>
                 <p> UX/UI Designer</p>
                 <div class="flex gap-2">
                     <p> Josefina Barrera </p>
-                    <x-_svg-linkedin class="w-6 h-6"></x-_svg-linkedin>
+                    <a href="https://www.linkedin.com/in/josefina-barrera-946988a5/" target="__blank"><x-_svg-linkedin class="w-6 h-6"></x-_svg-linkedin></a>
                     <div>
                     </div>
                 </div>
