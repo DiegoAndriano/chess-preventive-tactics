@@ -11,7 +11,7 @@ class HomeController extends Controller
     {
         $easyTactics = Tactic::get()->filter(function(Tactic $tactic){
             return ($tactic->easy >= $tactic->medium) && ($tactic->easy >= $tactic->hard);
-        })->sortByDesc('easy');
+        })->sortBy('easy');
         $mediumTactics = Tactic::get()->filter(function(Tactic $tactic){
             return ($tactic->medium > $tactic->easy) && ($tactic->medium > $tactic->hard);
         });
@@ -20,8 +20,7 @@ class HomeController extends Controller
         });
 
         $merged = $mediumTactics->merge($hardTactics);
-        $merged = $merged->merge($easyTactics);
-
+        $merged = $easyTactics->merge($merged);
         return view('welcome', [
             'tactic' => $merged
         ]);
