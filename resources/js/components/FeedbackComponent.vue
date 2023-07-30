@@ -44,11 +44,11 @@ function submit() {
 }
 </script>
 <template>
-    <div class="m-4 flex justify-end md:m-10">
+    <div class="m-4 flex justify-end md:m-10 lg:m-20">
         <button @click="tactic.toggleFeedbackModal"
-                class="flex cursor-pointer items-center gap-4 w-auto px-4 py-2 bg-stone-50  rounded-lg text-stone-500 shadow-sm hover:bg-stone-200 focus:bg-stone-300 focus:font-semibold  dark:bg-stone-900 dark:text-stone-200 dark:hover:bg-[#2C2927]">
+                class="flex cursor-pointer items-center gap-4 w-auto px-4 py-2 bg-stone-50  rounded-lg text-stone-500 shadow-sm hover:bg-stone-200 focus:bg-stone-300 focus:font-semibold  dark:bg-stone-900 dark:text-stone-200 dark:hover:bg-[#2C2927] lg:text-xl lg:px-8 lg:py-4">
             Submit feedback
-            <IconEdit class="w-6 h-6 dark:text-stone-100"></IconEdit>
+            <IconEdit class="w-6 h-6 lg:w-auto lg:h-8 dark:text-stone-100"></IconEdit>
         </button>
     </div>
     <transition name="slide">
