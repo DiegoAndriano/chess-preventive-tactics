@@ -11,15 +11,26 @@ class Tactic extends Model
 
     protected $guarded = [];
 
-    protected $appends = ['like_route', 'dislike_route'];
+    protected $appends = ['easy_path','hard_path', 'medium_path', 'answer_path'];
 
-    public function getLikeRouteAttribute()
+    protected $hidden = ['answer'];
+
+    public function getEasyPathAttribute()
     {
-        return '/like/' . $this->id;
+        return '/easy/' . $this->id;
     }
 
-    public function getDislikeRouteAttribute()
+    public function getMediumPathAttribute()
     {
-        return '/dislike/' . $this->id;
+        return '/medium/' . $this->id;
+    }
+    public function getHardPathAttribute()
+    {
+        return '/hard/' . $this->id;
+    }
+
+    public function getAnswerPathAttribute()
+    {
+        return '/answer/' . $this->id;
     }
 }

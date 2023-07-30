@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Tactic;
 use Illuminate\Http\Request;
 
-class DislikeTacticController extends Controller
+class EasyTacticController extends Controller
 {
     public function store(Tactic $tactic)
     {
-        $dislikes = $tactic->dislikes;
-        $tactic->update(['dislikes' => $dislikes + 1]);
+        $easy = $tactic->dislikes;
+        $tactic->update(['easy' => $easy + 1]);
         return "ok";    }
 }
