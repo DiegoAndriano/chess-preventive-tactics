@@ -71,6 +71,7 @@ function prev() {
 
 function checkAnswer(answer) {
     axios.get(games[index.value].answer_path).then((response) => {
+        boardAPI.move(response.data)
         if (answer === response.data) {
             success.value = true
             submitted.value = true
@@ -106,7 +107,7 @@ function rateHard() {
     <div class="bg-stone-50 dark:bg-stone-900">
         <div class="flex flex-col xl:flex-row xl:gap-10 xl:px-24">
             <div>
-                <TheChessboard class="pb-4" :board-config="boardConfig" @board-created="(api) => (boardAPI = api)" />
+                <TheChessboard class="w-[250px] md:w-[400px] pb-4" :board-config="boardConfig" @board-created="(api) => (boardAPI = api)" />
             </div>
 
             <div class="flex flex-col w-full px-6 md:px-10 lg:px-24 xl:px-0 gap-y-6 md:gap-y-10 py-6  md:py-10 xl:pt-0">

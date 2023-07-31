@@ -30,7 +30,8 @@ class TacticSeeder extends Seeder
                 'pgn' => '1. e4 Nf6 2. e5 Nd5 3. d4 { B03 Alekhine Defense } e6 4. Nf3 c6 5. Bc4 Qa5+ 6. Bd2 Qb6 7. Nc3 Nxc3 8. Bxc3 d5 9. Bd3 Bb4 10. Qd2 Bxc3 11. Qxc3 O-O 12. O-O Nd7 13. b3 a5 14. a4 Qd8 15. Rfe1 f6 16. Rac1 fxe5 17. Nxe5 Nxe5 18. Rxe5 Qh4 19. Qd2 Rb8 20. c4',
                 'option_one' => 'Qf4',
                 'option_two' => 'Qxd4',
-                'answer' => 'Kh8',
+                'option_three' => 'Kh8',
+                'answer' => 'Qxd4',
                 'description' => ""
             ]);
 
@@ -39,7 +40,8 @@ class TacticSeeder extends Seeder
                 'pgn' => '1. e4 Nf6 2. e5 Nd5 3. d4 { B03 Alekhine Defense } e6 4. Nf3 c6 5. Bc4 Qa5+ 6. Bd2 Qb6 7. Nc3 Nxc3 8. Bxc3 d5 9. Bd3 Bb4 10. Qd2 Bxc3 11. Qxc3 ',
                 'option_one' => 'O-O',
                 'option_two' => 'Nd7',
-                'answer' => 'g6',
+                'option_three' => 'g6',
+                'answer' => 'O-O',
                 'description' => ""
             ]);
 
