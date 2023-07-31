@@ -1,6 +1,6 @@
 <script setup>
-import IconSun from './icons/IconSun.vue'
-import IconMoon from './icons/IconMoon.vue'
+import IconSun from './Icons/IconSun.vue'
+import IconMoon from './Icons/IconMoon.vue'
 import { onMounted } from 'vue'
 import { useTacticStore } from "../stores/tactic";
 
