@@ -25,6 +25,24 @@ class TacticSeeder extends Seeder
                 'description' => "This tactic puzzle was extracted from Aman's chess habits. Link for further explanation of this particular tactic: https://youtu.be/qK0Ds5vLAjE?t=71"
             ]);
 
+        Tactic::create(
+            [
+                'pgn' => '1. e4 Nf6 2. e5 Nd5 3. d4 { B03 Alekhine Defense } e6 4. Nf3 c6 5. Bc4 Qa5+ 6. Bd2 Qb6 7. Nc3 Nxc3 8. Bxc3 d5 9. Bd3 Bb4 10. Qd2 Bxc3 11. Qxc3 O-O 12. O-O Nd7 13. b3 a5 14. a4 Qd8 15. Rfe1 f6 16. Rac1 fxe5 17. Nxe5 Nxe5 18. Rxe5 Qh4 19. Qd2 Rb8 20. c4',
+                'option_one' => 'Qf4',
+                'option_two' => 'Qxd4',
+                'answer' => 'Kh8',
+                'description' => ""
+            ]);
+
+        Tactic::create(
+            [
+                'pgn' => '1. e4 Nf6 2. e5 Nd5 3. d4 { B03 Alekhine Defense } e6 4. Nf3 c6 5. Bc4 Qa5+ 6. Bd2 Qb6 7. Nc3 Nxc3 8. Bxc3 d5 9. Bd3 Bb4 10. Qd2 Bxc3 11. Qxc3 ',
+                'option_one' => 'O-O',
+                'option_two' => 'Nd7',
+                'answer' => 'g6',
+                'description' => ""
+            ]);
+
         Tactic::create([
             'pgn' => "1. d4 Nf6 2. f4?! { (0.22 → -0.45) Inaccuracy. c4 was best. } { A45 Canard Opening } (2. c4 e6 3. g3 Bb4+ 4. Bd2 Be7 5. Nf3 d5 6. Bg2 Nbd7) 2... e6 3. Nf3 d5 4. e3 c5 5. c3 Nc6 6. Be2 Bd6 7. O-O Bd7?! { (-0.68 → -0.08) Inaccuracy. O-O was best. } (7... O-O 8. Ne5 Ne7 9. g4 b6 10. Nd2 Bb7 11. b3 Qc7 12. Bb2) 8. Ne5 Ne4 9. Bh5?! { (0.35 → -0.27) Inaccuracy. Nd2 was best. } (9. Nd2 Nxd2 10. Bxd2 O-O 11. a4 Be8 12. b3 cxd4 13. cxd4 f6 14. Nxc6 Bxc6 15. Rc1 a5) 9... O-O 10. Nxd7 Qxd7 11. Nd2 f5 12. Rf3?! { (-0.47 → -1.24) Inaccuracy. Nxe4 was best. } (12. Nxe4) 12... cxd4 13. exd4? { (-1.26 → -2.81) Mistake. cxd4 was best. } (13. cxd4 g6 14. Nxe4 dxe4 15. Rg3 Ne7 16. Be2 Nd5 17. h4 Kh8 18. Bd2 Rg8 19. Bc4 h5) 13... g6 14. Nxe4 dxe4? { (-3.30 → -1.36) Mistake. fxe4 was best. } (14... fxe4 15. Rg3 Rf6 16. Rg5 Kh8 17. Be2 Bxf4 18. Bxf4 Rxf4 19. g3 Rf6 20. Qd2 Raf8 21. Rf1) 15. Rg3 Qc7 16. Bxg6?! { (-0.89 → -1.67) Inaccuracy. Qf1 was best. } (16. Qf1 Ne7 17. Bd1 Rad8 18. Bb3 Rf6 19. c4 Nc6 20. Be3 Be7 21. d5 Na5 22. Bd4 Bc5) 16... hxg6 17. Rxg6+ Kf7 18. Qh5",
             'option_one' => 'Ke8',
@@ -75,7 +93,7 @@ class TacticSeeder extends Seeder
 
         Tactic::create([
             'pgn' => "1. e4 d5 2. exd5 Nf6 { B01 Scandinavian Defense: Modern Variation } 3. Nf3 Nxd5 4. Bc4 c5 5. c3 Nc6 6. Qb3?! { (0.51 → -0.40) Inaccuracy. O-O was best. } (6. O-O Nb6 7. Bb5 e6 8. Bxc6+ bxc6 9. d3 Be7 10. c4 O-O) 6... e6 7. O-O Na5 8. Qa4+ Bd7 9. Bb5 Bxb5? { (-0.47 → 1.04) Mistake. Nc6 was best. } (9... Nc6 10. d4 a6 11. Bxc6 Bxc6 12. Qc2 b5 13. Re1 Nf6 14. Nbd2 Bb7 15. a4 h6 16. dxc5) 10. Qxb5+ Nc6 11. d4? { (0.92 → -0.52) Mistake. Qxb7 was best. } (11. Qxb7 Rc8 12. Na3 Be7 13. d3 O-O 14. Nc4 Nb6 15. Nfe5 Rc7 16. Qa6 Nxe5 17. Nxe5 Qc8) 11... a6",
-            'option_one' => 'Qb5',
+            'option_one' => 'Qc4',
             'option_two' => 'Qb3',
             'option_three' => 'Qxb7',
             'answer' => 'Qxb7',
