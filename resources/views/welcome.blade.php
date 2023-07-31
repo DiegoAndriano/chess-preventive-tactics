@@ -44,7 +44,7 @@
                 </div>
             
             
-                <!--<feedback-component></feedback-component>-->
+                <feedback-component></feedback-component>
                 <footer class="w-full h-auto mt-8 pt-6 pb-20 bg-stone-600 text-stone-50 text-sm leading-loose dark:bg-stone-950 xl:px-24">
                     <div class=" flex justify-between px-6 py-6 items-center md:px-10">
                         <p class="font-semibold lg:text-lg"> About the project </p>

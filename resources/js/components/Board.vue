@@ -109,8 +109,8 @@ function rateHard() {
                 <TheChessboard class="pb-4" :board-config="boardConfig" @board-created="(api) => (boardAPI = api)" />
             </div>
 
-            <div class="flex flex-col w-full px-6 md:px-10 lg:px-24 xl:px-0 gap-y-6 md:gap-y-10 py-6 md:py-10 xl:pt-0">
-                <div class="flex gap-x-16 xl:gap-x-16 py-6 xl:px-0 lg:pt-16 lg:pb-16 xl:pt-0">
+            <div class="flex flex-col w-full px-6 md:px-10 lg:px-24 xl:px-0 gap-y-6 md:gap-y-10 py-6  md:py-10 xl:pt-0">
+                <div class="flex gap-x-4 xl:gap-x-16 py-6 xl:px-0 lg:pt-16 lg:pb-16 xl:pt-0">
                     <button :disabled="submitted" @click="checkAnswer(option_one)"
                         class="h-auto w-24 bg-stone-300 hover:bg-stone-400 hover:shadow-sm focus:shadow-sm focus:bg-[#8C8783] focus:font-bold px-4 py-2 rounded-lg font-semibold text-stone-700 transform duration-100 ease-in-out dark:bg-stone-900 dark:border dark:text-stone-100 dark:border-stone-50 dark:hover:bg-[#2C2927] lg:h-16 lg:w-24 lg:text-2xl">
                         {{ option_one }}
@@ -143,7 +143,7 @@ function rateHard() {
         </div>
 
         <div v-if="submitted" class="w-auto h-auto flex flex-col py-6 md:py-10 items-baseline lg:px-24 px-6">
-            <h3 class="text-stone-900 font-semibold md:text-lg lg:text-xl py-4">How hard did you find this puzzle?</h3>
+            <h3 class="text-stone-900 font-semibold md:text-lg lg:text-xl py-4 dark:text-stone-100">How hard did you find this puzzle?</h3>
             <div class="w-full flex justify-between items-baseline">
                 <div @click="rateEasy"
                     class="group cursor-pointer w-auto h-auto px-2 py-2 gap-4 flex flex-col items-center rounded-lg md:m-10 lg:text-xl">
@@ -169,7 +169,7 @@ function rateHard() {
             </div>
         </div>
 
-        <p v-if="rated" class="m-6 text-green-600 font-semibold text-sm lg:text-xl">Thank you for rating!</p>
+        <p v-if="rated" class="m-6 text-green-600 font-semibold text-sm lg:text-xl lg:px-20">Thank you for rating!</p>
 
         <div class="flex justify-between items-center px-4 py-6 md:px-10 lg:pb-6 lg:px-20">
             <button @click="prev"
