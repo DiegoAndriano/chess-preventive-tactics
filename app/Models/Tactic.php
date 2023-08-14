@@ -11,7 +11,7 @@ class Tactic extends Model
 
     protected $guarded = [];
 
-    protected $appends = ['easy_path','hard_path', 'medium_path', 'answer_path'];
+    protected $appends = ['easy_path','hard_path', 'medium_path', 'answer_path', 'beaten_path', 'won_path'];
 
     protected $hidden = ['answer'];
 
@@ -32,5 +32,15 @@ class Tactic extends Model
     public function getAnswerPathAttribute()
     {
         return '/answer/' . $this->id;
+    }
+
+    public function getBeatenPathAttribute()
+    {
+        return '/beaten/' . $this->id;
+    }
+
+    public function getWonPathAttribute()
+    {
+        return '/won/' . $this->id;
     }
 }

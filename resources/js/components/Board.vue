@@ -73,9 +73,11 @@ function checkAnswer(answer) {
     axios.get(games[index.value].answer_path).then((response) => {
         boardAPI.move(response.data)
         if (answer === response.data) {
+            axios.get(games[index.value].beaten_path)
             success.value = true
             submitted.value = true
         } else {
+            axios.get(games[index.value].won_path)
             success.value = false
             submitted.value = true
         }
