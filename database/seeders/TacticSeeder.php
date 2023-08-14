@@ -31,6 +31,7 @@ class TacticSeeder extends Seeder
                 'option_one' => 'Qf4',
                 'option_two' => 'Qxd4',
                 'option_three' => 'Kh8',
+                'easy' => 999,
                 'answer' => 'Qxd4',
                 'description' => ""
             ]);

@@ -21,8 +21,9 @@ class HomeController extends Controller
 
         $merged = $mediumTactics->merge($hardTactics);
         $merged = $easyTactics->merge($merged);
+
         return view('welcome', [
-            'tactic' => $merged
+            'tactic' => $merged->reverse()->values()
         ]);
     }
 }

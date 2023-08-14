@@ -1,11 +1,13 @@
 <?php
 
+use App\Http\Controllers\BeatenController;
 use App\Http\Controllers\EasyTacticController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HardTacticController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MediumTacticController;
 use App\Http\Controllers\TacticAnswerController;
+use App\Http\Controllers\WonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +27,5 @@ Route::get('/medium/{tactic}', [MediumTacticController::class, 'store']);
 Route::get('/hard/{tactic}', [HardTacticController::class, 'store']);
 Route::post('/feedback', [FeedbackController::class, 'store']);
 Route::get('/answer/{tactic}', [TacticAnswerController::class, 'index']);
+Route::get('/beaten/{tactic}', [BeatenController::class, 'update']);
+Route::get('/won/{tactic}', [WonController::class, 'update']);
