@@ -33,8 +33,6 @@ function handleMove(move) {
       } else {
         should.value = "The correct one was: " + pgn['pgn'][index.value + 1]
         index.value = 1
-        boardAPI.resetBoard()
-        boardAPI.boardConfig(boardConfig)
       }
     }
   }
@@ -48,8 +46,6 @@ function handleMove(move) {
       } else {
         should.value = "The correct one was: " + pgn['pgn'][index.value]
         index.value = 1
-        boardAPI.resetBoard()
-        boardAPI.boardConfig(boardConfig)
       }
     }
   }
@@ -71,6 +67,7 @@ const boardConfig = {
             class="w-[250px] md:w-[400px] pb-4" :board-config="boardConfig"
             @board-created="(api) => (boardAPI = api)"/>
         <p>{{ should }}</p>
+        <button @click="boardAPI.resetBoard()">Reset</button>
       </div>
     </div>
   </div>

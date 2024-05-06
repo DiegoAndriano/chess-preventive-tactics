@@ -12,24 +12,24 @@
             rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="{{ public_path('favicon.ico') }}">
 
-{{--    <!-- Google tag (gtag.js) -->--}}
-{{--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-990FPMR1YH"></script>--}}
-{{--    <script>--}}
-{{--        window.dataLayer = window.dataLayer || [];--}}
+    {{--    <!-- Google tag (gtag.js) -->--}}
+    {{--    <script async src="https://www.googletagmanager.com/gtag/js?id=G-990FPMR1YH"></script>--}}
+    {{--    <script>--}}
+    {{--        window.dataLayer = window.dataLayer || [];--}}
 
-{{--        function gtag() {--}}
-{{--            dataLayer.push(arguments);--}}
-{{--        }--}}
+    {{--        function gtag() {--}}
+    {{--            dataLayer.push(arguments);--}}
+    {{--        }--}}
 
-{{--        gtag('js', new Date());--}}
+    {{--        gtag('js', new Date());--}}
 
-{{--        gtag('config', 'G-990FPMR1YH');--}}
-{{--    </script>--}}
+    {{--        gtag('config', 'G-990FPMR1YH');--}}
+    {{--    </script>--}}
 
     @vite('resources/css/app.css')
 </head>
 
-<body  id="app">
+<body id="app">
 <main class="flex flex-col justify-center bg-stone-50 dark:bg-stone-900 items-center">
     <div class="max-w-[1280px]">
         <div class="bg-stone-50 font-Khula w-full h-auto dark:bg-stone-900">
@@ -39,7 +39,8 @@
                 <dark-switch></dark-switch>
             </nav>
             <div class="pb-4 pt-6 lg:pt-4">
-                <h2 class="px-4 pb-6 text-stone-700 text-lg font-semibold  dark:text-stone-100 md:px-10 md:text-xl md:pb-10 lg:px-24">Select the move that loses the game:</h2>
+                <h2 class="px-4 pb-6 text-stone-700 text-lg font-semibold  dark:text-stone-100 md:px-10 md:text-xl md:pb-10 lg:px-24">
+                    The name of the study is {{ $finalPgn['name'] }} and the opening is {{ $finalPgn['opening'] }}</h2>
 
                 <study-board
                         :pgn="{{ json_encode($finalPgn) }}"></study-board>
@@ -50,14 +51,19 @@
             <footer class="w-full h-auto mt-8 pt-6 pb-20 bg-stone-600 text-stone-50 text-sm leading-loose dark:bg-stone-950 xl:px-24">
                 <div class=" flex justify-between px-6 py-6 items-center md:px-10">
                     <p class="font-semibold lg:text-lg"> About the project </p>
-                    <a href="https://github.com/DiegoAndriano/chess-preventive-tactics" target="__blank"> <x-_svg-git class="w-6 h-6 md:w-8 md:h-8 md:mr-2"></x-_svg-git> </a>
+                    <a href="https://github.com/DiegoAndriano/chess-preventive-tactics" target="__blank">
+                        <x-_svg-git class="w-6 h-6 md:w-8 md:h-8 md:mr-2"></x-_svg-git>
+                    </a>
 
                 </div>
                 <div class="w-full h-auto px-6 md:px-10 lg:text-lg">
-                    <p> Many chess players fall for tactics that could be avoided. Isn't there a tool that helps me prevent the
+                    <p> Many chess players fall for tactics that could be avoided. Isn't there a tool that helps me
+                        prevent the
                         movement that enables the tactic? <br>
-                        Now there is! Chess preventing tactics (the older and mature brother of Chess common mistakes) is an
-                        open source tool that helps train the eye and detective skills from experienced players and those who
+                        Now there is! Chess preventing tactics (the older and mature brother of Chess common mistakes)
+                        is an
+                        open source tool that helps train the eye and detective skills from experienced players and
+                        those who
                         are just starting out. <br>
                         In 48 hours we created this MVP with passion, enthusiasm and (of course) hard work, all kinds of
                         feedback from the chess community
@@ -74,7 +80,8 @@
                 </div>
                 <div class="px-6 py-4 md:px-10 flex flex-col">
                     <p class="font font-semibold py-2 lg:text-lg">Special thanks to these open source libraries:</p>
-                    <a href="https://qwerty084.github.io/vue3-chessboard/events.html" target="__blank" lg:text-lg>
+                    <a href="https://qwerty084.github.io/vue3-chessboard/events.html" target="__blank"
+                       class="lg:text-lg">
                         Chess board
                     </a>
                     <a href="https://lichess.org/" target="__blank lg:text-lg">
@@ -88,17 +95,23 @@
                         <p> Full-stack dev</p>
                         <div class="flex gap-2">
                             <p> Diego Andriano </p>
-                            <a href="https://www.linkedin.com/in/diego-andriano-a59abb139/" target="__blank"> <x-_svg-linkedin class="w-6 h-6"></x-_svg-linkedin></a>
+                            <a href="https://www.linkedin.com/in/diego-andriano-a59abb139/" target="__blank">
+                                <x-_svg-linkedin class="w-6 h-6"></x-_svg-linkedin>
+                            </a>
                         </div>
                     </div>
                     <div>
                         <p> UX/UI Designer</p>
                         <div class="flex gap-2 items-baseline">
                             <p> Josefina Barrera </p>
-                            <a href="https://www.linkedin.com/in/josefina-barrera-946988a5/" target="__blank"><x-_svg-linkedin class="w-6 h-6 "></x-_svg-linkedin></a>
+                            <a href="https://www.linkedin.com/in/josefina-barrera-946988a5/" target="__blank">
+                                <x-_svg-linkedin class="w-6 h-6 "></x-_svg-linkedin>
+                            </a>
                             <div>
                             </div>
                         </div>
+                    </div>
+                </div>
             </footer>
 
         </div>
