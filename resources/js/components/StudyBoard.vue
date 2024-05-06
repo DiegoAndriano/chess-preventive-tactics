@@ -57,6 +57,14 @@ const boardConfig = {
   "orientation": pgn['name'].includes('B') ? "black" : "white",
 }
 
+function reset() {
+  boardAPI.resetBoard()
+
+  if (pgn['name'].includes('B')) {
+    boardAPI?.move(pgn['pgn'][1])
+  }
+}
+
 </script>
 <template>
   <div class="bg-stone-50 dark:bg-stone-900">
@@ -67,7 +75,10 @@ const boardConfig = {
             class="w-[250px] md:w-[400px] pb-4" :board-config="boardConfig"
             @board-created="(api) => (boardAPI = api)"/>
         <p>{{ should }}</p>
-        <button @click="boardAPI.resetBoard()">Reset</button>
+        <button
+            class="rounded-lg bg-stone-600 text-stone-50 text-sm leading-loose dark:bg-stone-950 px-4 py-2 font-semibold text-lg"
+            @click="reset()">Reset
+        </button>
       </div>
     </div>
   </div>
