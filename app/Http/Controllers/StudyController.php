@@ -11,9 +11,7 @@ class StudyController extends Controller
     {
         $pgns = Http::get("https://lichess.org/api/study/yS9QxRwR.pgn?orientation=true")->body();
         $pgns = explode("\n\n\n", $pgns);
-//        dd($pgns);
-//        $pgn = $pgns[rand(0, count($pgns) - 1)];
-        $pgn = $pgns[38];
+        $pgn = $pgns[rand(0, count($pgns) - 1)];
 
         $pgn = explode("\n", $pgn);
         $finalPgn = [
