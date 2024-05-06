@@ -31,4 +31,4 @@ Route::get('/answer/{tactic}', [TacticAnswerController::class, 'index']);
 Route::get('/beaten/{tactic}', [BeatenController::class, 'update']);
 Route::get('/won/{tactic}', [WonController::class, 'update']);
 
-Route::get('/study', [StudyController::class, 'index']);
+Route::get('/study', [StudyController::class, 'index'])->name('study');

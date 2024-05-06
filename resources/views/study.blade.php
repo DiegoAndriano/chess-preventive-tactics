@@ -43,6 +43,7 @@
                     The name of the study is {{ $finalPgn['name'] }} and the opening is {{ $finalPgn['opening'] }}</h2>
 
                 <study-board
+                        route="{{route('study')}}"
                         :pgn="{{ json_encode($finalPgn) }}"></study-board>
             </div>
 
