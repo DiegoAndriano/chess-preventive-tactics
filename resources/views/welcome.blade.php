@@ -39,17 +39,17 @@
                     <dark-switch></dark-switch>
                 </nav>
                 <div class="pb-4 pt-6 lg:pt-4">
-                    <h2 class="px-4 pb-6 text-stone-700 text-lg font-semibold  dark:text-stone-100 md:px-10 md:text-xl md:pb-10 lg:px-24">Select the move that enables the tactic:</h2>
+                    <h2 class="px-4 pb-6 text-stone-700 text-lg font-semibold  dark:text-stone-100 md:px-10 md:text-xl md:pb-10 lg:px-24">Select the move that loses the game:</h2>
                     <board :tactic="{{ json_encode($tactic) }}"></board>
                 </div>
-            
-            
+
+
                 <feedback-component></feedback-component>
                 <footer class="w-full h-auto mt-8 pt-6 pb-20 bg-stone-600 text-stone-50 text-sm leading-loose dark:bg-stone-950 lg:px-10 xl:px-24">
                     <div class=" flex justify-between px-6 py-6 items-center md:px-10">
                         <p class="font-semibold lg:text-lg"> About the project </p>
                         <a href="https://github.com/DiegoAndriano/chess-preventive-tactics" target="__blank"> <x-_svg-git class="w-6 h-6 md:w-8 md:h-8 md:mr-2"></x-_svg-git> </a>
-                        
+
                     </div>
                     <div class="w-full h-auto px-6 md:px-10 lg:text-lg">
                         <p> Many chess players fall for tactics that could be avoided. Isn't there a tool that helps me prevent the
@@ -78,7 +78,7 @@
                         <a href="https://lichess.org/" target="__blank" class="lg:text-lg">
                             Lichess
                         </a>
-                    
+
                     </div>
                     <p class="font font-semibold px-6 py-4 md:px-10 lg:text-lg">The who...</p>
                     <div class="w-auto h-auto px-6 flex justify-between md:px-10 lg:text-lg">
@@ -98,11 +98,11 @@
                                 </div>
                             </div>
                 </footer>
-            
+
             </div>
         </div>
     </main>
-    
+
 @vite('resources/js/app.js')
 </body>
 

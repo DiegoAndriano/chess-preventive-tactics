@@ -6,6 +6,7 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\HardTacticController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MediumTacticController;
+use App\Http\Controllers\StudyController;
 use App\Http\Controllers\TacticAnswerController;
 use App\Http\Controllers\WonController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,5 @@ Route::post('/feedback', [FeedbackController::class, 'store']);
 Route::get('/answer/{tactic}', [TacticAnswerController::class, 'index']);
 Route::get('/beaten/{tactic}', [BeatenController::class, 'update']);
 Route::get('/won/{tactic}', [WonController::class, 'update']);
+
+Route::get('/study', [StudyController::class, 'index']);

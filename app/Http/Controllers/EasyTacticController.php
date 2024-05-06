@@ -9,7 +9,7 @@ class EasyTacticController extends Controller
 {
     public function store(Tactic $tactic)
     {
-        $easy = $tactic->dislikes;
+        $easy = $tactic->easy;
         $tactic->update(['easy' => $easy + 1]);
         return "ok";    }
 }
